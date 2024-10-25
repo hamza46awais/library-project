@@ -53,7 +53,7 @@ CREATE TABLE inventory (
     UNIQUE (floor, number)  
 ); 
 
-CREATE TABLE person (
+CREATE TABLE customer (
 	id INT PRIMARY KEY AUTO_INCREMENT, 
     first_name VARCHAR(50),
     last_name VARCHAR(50),
@@ -70,12 +70,6 @@ CREATE TABLE staff (
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     UNIQUE (first_name, last_name)  
-); 
-
-CREATE TABLE customer (
-    id INT PRIMARY KEY AUTO_INCREMENT, 
-    name VARCHAR(50) NOT NULL,
-    UNIQUE (name)  
 ); 
 
 
@@ -112,6 +106,7 @@ CREATE TABLE events (
 );
 
 CREATE TABLE book_author (
+	id INT PRIMARY KEY AUTO_INCREMENT, 
     book_id INT NOT NULL,
     author_id INT NOT NULL,
     PRIMARY KEY (book_id, author_id),
@@ -120,6 +115,7 @@ CREATE TABLE book_author (
 ); 
 
 CREATE TABLE book_category (
+	id INT PRIMARY KEY AUTO_INCREMENT, 
     book_id INT NOT NULL,
     category_id INT NOT NULL,
     PRIMARY KEY (book_id, category_id),
