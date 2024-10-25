@@ -35,7 +35,6 @@ INSERT INTO book (book_name, author_id, category_id, publisher_id, book_descript
 
 
 
-
 -- Author Insert Values
 INSERT INTO author (first_name, last_name, country, is_active) VALUES
 ('John', 'Doe', 'USA', TRUE),
@@ -143,34 +142,6 @@ INSERT INTO category (name) VALUES
 ('True Crime');
 
 
-
--- Book Insert Values
-INSERT INTO book (book_name, author_id, category_id, publisher_id, book_description, book_edition, book_language, release_year) VALUES
-('The Great Gatsby', 1, 1, 1, 'A novel about the American dream.', 1, 'English', 1925),
-('To Kill a Mockingbird', 2, 2, 1, 'A novel about racial injustice.', 1, 'English', 1960),
-('1984', 3, 3, 2, 'A dystopian novel about totalitarianism.', 1, 'English', 1949),
-('Pride and Prejudice', 4, 4, 2, 'A romantic novel set in the early 19th century.', 1, 'English', 1813),
-('The Catcher in the Rye', 5, 5, 3, 'A novel about teenage angst and alienation.', 1, 'English', 1951),
-('Moby-Dick', 6, 6, 3, 'A novel about the obsessive quest for revenge.', 1, 'English', 1851),
-('War and Peace', 7, 7, 4, 'A historical novel set during the Napoleonic wars.', 1, 'Russian', 1869),
-('The Odyssey', 8, 8, 4, 'An epic poem about the adventures of Odysseus.', 1, 'Greek', -800),
-('Jane Eyre', 9, 9, 5, 'A novel about an orphaned girl who becomes a governess.', 1, 'English', 1847),
-('The Hobbit', 10, 10, 5, 'A fantasy novel about the journey of Bilbo Baggins.', 1, 'English', 1937),
-('Fahrenheit 451', 11, 11, 6, 'A dystopian novel about book censorship.', 1, 'English', 1953),
-('Brave New World', 12, 12, 6, 'A novel about a future society driven by technology.', 1, 'English', 1932),
-('The Picture of Dorian Gray', 13, 13, 7, 'A novel about vanity and moral duplicity.', 1, 'English', 1890),
-('The Brothers Karamazov', 14, 14, 7, 'A philosophical novel exploring morality and faith.', 1, 'Russian', 1880),
-('Crime and Punishment', 15, 15, 8, 'A novel about guilt and redemption.', 1, 'Russian', 1866),
-('Wuthering Heights', 16, 16, 8, 'A tale of passion and revenge on the Yorkshire moors.', 1, 'English', 1847),
-('The Grapes of Wrath', 17, 17, 9, 'A novel about the struggles of American farmers.', 1, 'English', 1939),
-('Little Women', 18, 18, 9, 'A coming-of-age novel about the lives of four sisters.', 1, 'English', 1868),
-('Anna Karenina', 19, 19, 10, 'A novel about love and infidelity in Russian society.', 1, 'Russian', 1877),
-('The Alchemist', 20, 20, 10, 'A novel about a shepherd’s journey to find treasure.', 1, 'Portuguese', 1988),
-('The Road', 21, 21, 11, 'A post-apocalyptic novel about survival and hope.', 1, 'English', 2006),
-('A Tale of Two Cities', 22, 22, 11, 'A historical novel set in London and Paris.', 1, 'English', 1859),
-('The Old Man and the Sea', 23, 23, 12, 'A novel about an old fisherman’s struggle.', 1, 'English', 1952),
-('The Bell Jar', 24, 24, 12, 'A semi-autobiographical novel about mental illness.', 1, 'English', 1963),
-('Dune', 25, 25, 13, 'A science fiction novel about politics and power.', 1, 'English', 1965);
 
 
 
