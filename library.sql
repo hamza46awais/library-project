@@ -60,10 +60,6 @@ CREATE TABLE person (
 	overdue_fees INT
 ); 
 
-CREATE TABLE rental (
-	id INT PRIMARY KEY AUTO_INCREMENT, 
-	name VARCHAR(50) NOT NULL
-); 
 
 CREATE TABLE staff (
 	id INT PRIMARY KEY AUTO_INCREMENT, 
@@ -82,13 +78,6 @@ CREATE TABLE customer (
     UNIQUE (name)  
 ); 
 
-CREATE TABLE staff (
-    id INT PRIMARY KEY AUTO_INCREMENT, 
-    name VARCHAR(50) NOT NULL,
-    position VARCHAR(50) NOT NULL,
-    years_served INT NOT NULL DEFAULT 0,
-    UNIQUE (name, position)  
-); 
 
 CREATE TABLE rental (
     id INT PRIMARY KEY AUTO_INCREMENT, 
