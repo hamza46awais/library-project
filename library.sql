@@ -12,14 +12,12 @@ CREATE TABLE author (
 
 CREATE TABLE publisher (
     id INT PRIMARY KEY AUTO_INCREMENT, 
-    name VARCHAR(50) NOT NULL,
-    UNIQUE (name)  
+    name VARCHAR(50) NOT NULL UNIQUE,
 );
 
 CREATE TABLE category (
     id INT PRIMARY KEY AUTO_INCREMENT, 
-    name VARCHAR(50) NOT NULL,
-    UNIQUE (name)  
+    name VARCHAR(50) NOT NULL UNIQUE,
 );
 
 CREATE TABLE book (
@@ -40,17 +38,15 @@ CREATE TABLE book (
 
 CREATE TABLE section (
     id INT PRIMARY KEY AUTO_INCREMENT, 
-    name VARCHAR(50) NOT NULL,
-    UNIQUE (name)  
+    name VARCHAR(50) NOT NULL UNIQUE,
 ); 
 
 CREATE TABLE inventory (
     id INT PRIMARY KEY AUTO_INCREMENT, 
-    floor INT NOT NULL,
+    floor INT NOT NULL UNIQUE,
     number INT NOT NULL,
     book_id INT NOT NULL,
-    FOREIGN KEY (book_id) REFERENCES book(id),
-    UNIQUE (floor, number)  
+    FOREIGN KEY (book_id) REFERENCES book(id), 
 ); 
 
 CREATE TABLE customer (
@@ -65,11 +61,8 @@ CREATE TABLE staff (
 	id INT PRIMARY KEY AUTO_INCREMENT, 
     position VARCHAR(50),
     years_served INT,
-	name VARCHAR(50) NOT NULL
-    id INT PRIMARY KEY AUTO_INCREMENT, 
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    UNIQUE (first_name, last_name)  
 ); 
 
 
