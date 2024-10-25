@@ -2,20 +2,21 @@ CREATE DATABASE library;
 
 CREATE TABLE book (
 	id INT PRIMARY KEY AUTO_INCREMENT, 
-	name VARCHAR(50) NOT NULL, 
+	book_name VARCHAR(50) NOT NULL, 
     author_id VARCHAR(50) NOT NULL,
     category VARCHAR(120) NOT NULL,
     publisher_id VARCHAR(50) NOT NULL,
-    description VARCHAR(120) NOT NULL,
-    edition INT,
-    language VARCHAR(50),
+    book_description VARCHAR(120) NOT NULL,
+    book_edition INT,
+    book_language VARCHAR(50),
     release_year INT
 ); 
 
 CREATE TABLE author (
 	id INT PRIMARY KEY AUTO_INCREMENT, 
 	first_name VARCHAR(50),
-    last_name VARCHAR(50),
+    last_name VARCHAR(50) NOT NULL,
+	country VARCHAR(50),
     author_id VARCHAR(50) NOT NULL,
     is_active BOOLEAN
 ); 
@@ -46,7 +47,6 @@ CREATE TABLE person (
 	id INT PRIMARY KEY AUTO_INCREMENT, 
     first_name VARCHAR(50),
     last_name VARCHAR(50),
-	name VARCHAR(50) NOT NULL
 ); 
 
 CREATE TABLE rental (
@@ -100,4 +100,8 @@ CREATE TABLE events (
     end_time TIME,
     event_type VARCHAR(50),
     recurring BOOLEAN
+	participants_id,
+	staff_id,
+	ADD FOREIGN KEY REFERENCES participants_id
+	ADD FOREIGN KEY REFERENCES staff_id
 ); 
