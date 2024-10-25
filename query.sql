@@ -1,5 +1,5 @@
 USE library;
 
-SELECT * FROM book;
+SELECT * FROM author;
 
 

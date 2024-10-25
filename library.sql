@@ -12,12 +12,12 @@ CREATE TABLE author (
 
 CREATE TABLE publisher (
     id INT PRIMARY KEY AUTO_INCREMENT, 
-    name VARCHAR(50) NOT NULL UNIQUE,
+    name VARCHAR(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE category (
     id INT PRIMARY KEY AUTO_INCREMENT, 
-    name VARCHAR(50) NOT NULL UNIQUE,
+    name VARCHAR(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE book (
@@ -38,7 +38,7 @@ CREATE TABLE book (
 
 CREATE TABLE section (
     id INT PRIMARY KEY AUTO_INCREMENT, 
-    name VARCHAR(50) NOT NULL UNIQUE,
+    name VARCHAR(50) NOT NULL UNIQUE
 ); 
 
 CREATE TABLE inventory (
@@ -46,7 +46,7 @@ CREATE TABLE inventory (
     floor INT NOT NULL UNIQUE,
     number INT NOT NULL,
     book_id INT NOT NULL,
-    FOREIGN KEY (book_id) REFERENCES book(id), 
+    FOREIGN KEY (book_id) REFERENCES book(id)
 ); 
 
 CREATE TABLE customer (
@@ -62,7 +62,7 @@ CREATE TABLE staff (
     position VARCHAR(50),
     years_served INT,
     first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL
 ); 
 
 
@@ -102,7 +102,6 @@ CREATE TABLE book_author (
 	id INT PRIMARY KEY AUTO_INCREMENT, 
     book_id INT NOT NULL,
     author_id INT NOT NULL,
-    PRIMARY KEY (book_id, author_id),
     FOREIGN KEY (book_id) REFERENCES book(id),
     FOREIGN KEY (author_id) REFERENCES author(id)
 ); 
@@ -111,7 +110,6 @@ CREATE TABLE book_category (
 	id INT PRIMARY KEY AUTO_INCREMENT, 
     book_id INT NOT NULL,
     category_id INT NOT NULL,
-    PRIMARY KEY (book_id, category_id),
     FOREIGN KEY (book_id) REFERENCES book(id),
     FOREIGN KEY (category_id) REFERENCES category(id)
 );
