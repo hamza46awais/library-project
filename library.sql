@@ -47,6 +47,7 @@ CREATE TABLE person (
 	id INT PRIMARY KEY AUTO_INCREMENT, 
     first_name VARCHAR(50),
     last_name VARCHAR(50),
+	overdue_fees INT
 ); 
 
 CREATE TABLE rental (
